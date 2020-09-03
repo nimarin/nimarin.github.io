@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 12px;
+}
+
+body {
+  border-style: none;
+  line-height: 1;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 20px;
+  color: #000;
+  background-color: #fff;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on;
+  margin: 0;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  width: 50%;
+  height: 80vh;
+  background-size: cover;
+  background-position: 60% 30%;
+  background-image: url("/nm.jpg");
+}
+
+.right {
+  font-size: 6em;
+  line-height: 0.9em;
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.right > div {
+  padding: 50px;
+}
+
+@media (max-width: 599px) {
+  .container {
+    height: auto;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .left {
+    height: 70vh;
+    width: 100%;
+  }
+  .right {
+    font-size: 3.5em;
+    min-height: 30vh;
+    width: 100%;
+  }
+  .right > div {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 600px) {
+  .right {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 980px) {
+  .right {
+    font-size: 6em;
+  }
+}
